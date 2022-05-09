@@ -32,6 +32,7 @@ plt.title('Class distribution', fontsize = 15)
 plt.xlabel('Classes', fontsize = 15)
 plt.xticks(rotation=360)
 plt.ylabel('Quantity', fontsize = 15)
+plt.savefig("class_distr.jpg")
 plt.show()
 print()
 
@@ -55,6 +56,7 @@ print('Test set accuracy: {:.4f}'.format(model.score(X_test, Y_test) * 100))
 
 fig = plt.figure(figsize=(40,20))
 fig = tree.plot_tree(model, feature_names=list(X.columns.values),  class_names=['M', 'B'], filled=True, impurity = False)
+plt.savefig("decision_tree.jpg")
 plt.show()
 
 #%%
@@ -68,6 +70,7 @@ ax.set_title('Feature importances', fontsize=15)
 ax.set_xlabel('Importance', fontsize=15)
 ax.set_ylabel('Features', fontsize=15)
 _ = ax.set_yticklabels(np.array(X_train.columns)[indices])
+plt.savefig("feature_importances.jpg")
 plt.show()
 
 
