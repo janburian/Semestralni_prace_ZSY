@@ -37,15 +37,15 @@ print()
 #%%
 # Prediction tree
 X = dataset.drop('diagnosis', axis=1)
-Y = dataset ['diagnosis']
+Y = dataset['diagnosis']
 
 #%%
 X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.2, random_state = 14)
-print("Train dataset shape: ", X_train.shape )
-print("Test dataset shape: ", X_test.shape )
+print("Train dataset shape: ", X_train.shape)
+print("Test dataset shape: ", X_test.shape)
 
 #%%
-model = tree.DecisionTreeClassifier(criterion='entropy', splitter='best', random_state=123)
+model = tree.DecisionTreeClassifier(criterion='entropy', splitter='best', random_state = 50)
 model.fit(X_train, Y_train)
 predictions = model.predict(X_test)
 print('Training set accuracy: {:.4f}'.format(model.score(X_train, Y_train) * 100))
@@ -55,7 +55,19 @@ print('Test set accuracy: {:.4f}'.format(model.score(X_test, Y_test) * 100))
 fig = plt.figure(figsize=(40,20))
 fig = tree.plot_tree(model, feature_names=list(X.columns.values),  class_names=['M', 'B'], filled=True, impurity = False)
 plt.show()
-print()
+
+#%%
+tree_importances = model.feature_importances_
+indices = np.argsort(tree_importances)
+
+fig, ax = plt.subplots(figsize = (7,7))
+ax.barh(range(len(tree_importances)), tree_importances[indices])
+ax.set_yticks(range(len(tree_importances)))
+ax.set_title('Feature importances', fontsize=15)
+ax.set_xlabel('Importance', fontsize=15)
+ax.set_ylabel('Features', fontsize=15)
+_ = ax.set_yticklabels(np.array(X_train.columns)[indices])
+plt.show()
 
 
 
