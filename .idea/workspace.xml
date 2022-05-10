@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1e6e1108-cd13-4e05-8f0d-2b302c5914df" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/breast_cancer.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/breast_cancer.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/breast_cancer.py" beforeDir="false" afterPath="$PROJECT_DIR$/breast_cancer.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +89,7 @@
       <option name="presentableId" value="Default" />
       <updated>1652083811922</updated>
       <workItem from="1652083813191" duration="283000" />
-      <workItem from="1652084269166" duration="13099000" />
+      <workItem from="1652084269166" duration="13447000" />
     </task>
     <servers />
   </component>
@@ -114,7 +112,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="jupyter-line">
           <url>notebook://C:/Users/janbu/GitHub/Semestralni_prace_ZSY/breast_cancer.ipynb</url>
-          <line>21</line>
+          <line>19</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">

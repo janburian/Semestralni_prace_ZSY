@@ -1,3 +1,5 @@
 
 *.jpg
 feature_importances.png
+.idea/workspace.xml
+breast_cancer.ipynb
